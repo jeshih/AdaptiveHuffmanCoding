@@ -1,17 +1,21 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class AHTree extends AbstractAHTree{
 	public AHNode root; //root node of tree
 	public ArrayList<Character> existchar;
 	public AHNode nyt;
-	public ArrayList<AHNode> nodeTree;
+	public Map<Character, AHNode> nodeTree;
 	
 	public AHTree(){
 		nyt = new AHNode();
-		nodeTree = new ArrayList<AHNode>();
+		nodeTree = new HashMap<Character,AHNode>();
 		existchar = new ArrayList<Character>();
 		root = new AHNode();
+		
+		setRoot(nyt);
 	}
 	
 	
@@ -21,7 +25,13 @@ public class AHTree extends AbstractAHTree{
 	 */
 	@Override
 	public void insert(char c) {
-		// TODO Auto-generated method stub
+		AHNode temp = new AHNode();
+		AHNode connection = new AHNode();
+		connection.set
+		temp.setCharValue(c);
+		temp.setLeftSibling(nyt)
+		temp.setParent(parent)
+		
 		
 	}
 
@@ -42,8 +52,12 @@ public class AHTree extends AbstractAHTree{
 	 */
 	@Override
 	public String getEncoding(char c) {
-		// TODO Auto-generated method stub
-		return null;
+		if (existchar.contains(c)){
+			return
+		}
+		else{ //character has not been added to the tree yet
+			return null;
+		}
 	}
 
 	
@@ -52,8 +66,7 @@ public class AHTree extends AbstractAHTree{
 	 */
 	@Override
 	public void setRoot(AHNode newRoot) {
-		// TODO Auto-generated method stub
-		
+		root = newRoot;
 	}
 
 
@@ -63,8 +76,7 @@ public class AHTree extends AbstractAHTree{
    	 */
 	@Override
 	public AHNode getRoot() {
-		// TODO Auto-generated method stub
-		return null;
+		return root;
 	}
 
 }
