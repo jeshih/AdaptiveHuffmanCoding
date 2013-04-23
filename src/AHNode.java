@@ -132,7 +132,6 @@ public class AHNode implements Comparable<AHNode> {
 		return true;
 	}
 
-	@Override
 	public int compareTo(AHNode otherNode) {
 		if (this.weight < otherNode.getWeight()) {
 			return -1;
